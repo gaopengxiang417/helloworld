@@ -3,10 +3,10 @@ __author__ = 'wangchen'
 
 #测试while条件判断
 number = 45
-guess = int(raw_input("please write a number"))
 issuccess = True
 
 while issuccess:
+    guess = int(raw_input("please write a number"))
     if guess == number:
         print "you get the correct number.."
         issuccess = False
@@ -15,6 +15,14 @@ while issuccess:
         print "you input number bigger than number"
     else:
         print "you input is smaller than number"
-
+else:
+    print "else while block"
 print "done"
+
+
+#for in 的循环使用
+for i in range(1,6):
+    print i
+else:
+    print "close"
 
