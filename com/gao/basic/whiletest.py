@@ -36,3 +36,19 @@ while True:
         print "error"
 else:
     print "finally closed"
+
+#continue 语句的使用
+while True:
+    inputs = raw_input("enter the input")
+    if inputs == "quit":
+        print "quit"
+        break
+    if len(inputs) < 3:
+        continue
+    print "not continue"
+
+print("end")
+
+
+
+
