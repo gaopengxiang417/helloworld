@@ -42,12 +42,12 @@ print "********start to alg**********"
 print 3 + 5  #加法
 print 3 - 5  #减法
 print 3 * 2  #乘法
-print 3 * "l" #乘法
-print 3 ** 3    #阶乘
-print 4 / 3     #除法
-print 4.0 / 3   #除法保留小数
+print 3 * "l"  #乘法
+print 3 ** 3  #阶乘
+print 4 / 3  #除法
+print 4.0 / 3  #除法保留小数
 print 4.0 // 3  #除法只输出整数
-print 4 % 2     #莫
+print 4 % 2  #莫
 print 3 << 2
 print 3 >> 2
 print 3 & 1
@@ -58,3 +58,27 @@ print 3 != 4
 print 3 == 4
 print True and False
 print True or False
+
+
+#运算顺序
+lenth = 5
+breadth = 3
+
+print "all:", lenth + breadth
+print "area:", (lenth + breadth) * 3
+
+#if控制流
+number = 45
+
+guess = int(raw_input("enter an integer:"))
+
+if guess == number:
+    print "thank you guess right.."
+    print "but you get nothing"
+
+elif guess > number:
+    print "the number you guess biger than number"
+
+else:
+    print "the number you guess smaller than number"
+
