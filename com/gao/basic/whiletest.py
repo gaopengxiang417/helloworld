@@ -26,3 +26,13 @@ for i in range(1,6):
 else:
     print "close"
 
+#break 语句的使用
+while True:
+    inputs = raw_input("enter input string:")
+    if inputs == "china":
+        print "echo"
+        break
+    else:
+        print "error"
+else:
+    print "finally closed"
