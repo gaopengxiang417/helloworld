@@ -41,3 +41,20 @@ print "is greator or equal:", 5 >= -4
 print "is less or equal:", 5 <= -2
 
 print 30.0 / 13
+
+
+cars = 100
+spaces_in_cars = 4.0
+drivers = 30
+passengers = 90
+cars_not_driver = cars - drivers
+cars_driven = drivers
+carpool_capcity = cars_driven * spaces_in_cars
+average_passengars_per_car = passengers / cars_driven
+
+print "there are", cars, "can driven"
+print "there are only", drivers, "drivers available"
+print "there will be", cars_not_driver, "empty cars"
+print "we can transport", carpool_capcity, "people today"
+print "we have", passengers,"to carpool today"
+print "we need to put about", average_passengars_per_car, "in each car"
