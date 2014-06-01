@@ -75,3 +75,65 @@ print "he is %d cm height" % my_height
 print "he is %d kg " % my_weight
 print "he got %s eyes and %s hair" % (my_eyes, my_hair)
 print "he teeth are usually %s" % my_teeth
+print "he is %r name" % my_name
+print "he age is %r" % my_age
+
+# python中得所有的格式化的功能
+print "the integer is %d" % my_age #整形
+
+print "the octor is %o" % my_age #八进制
+
+print "the floot is %f" % 34.3434 #浮点
+print "the floot is %6.2f" % 34.34343 #保留进制的浮点
+print "the floot is %06.2f" %23.43434 #前面补位
+
+print "the %d %%" % 23 #用来在格式化字符串中输出 %
+
+print "the number is %e" % 234.454545 #科学计数法
+
+# 变量和格式化打印联合一起使用
+
+x = "there are %d types of people" % 10
+binary = "binary"
+do_not = "don't"
+y = "those who know %s and those who %s" % (binary, do_not)
+
+print x
+print y
+
+print "i said : %r" % x
+print "i also said: '%s'." % y
+
+hilarious = False
+joke_evaluation = "isn't that joke so funny ? %r"
+
+print joke_evaluation % hilarious
+
+w = "this is the left side of ..."
+e = "a string with a right side..."
+
+print w + e
+
+print "mary had a little lamb"
+print "its fleece was white as %s." % "snow"
+print "and everywhere that mary went"
+print "." * 10
+
+end1 = "C"
+end2 = "h"
+end3 = "e"
+end4 = "e"
+end5 = "s"
+end6 = "e"
+end7 = "B"
+end8 = "u"
+end9 = "r"
+end10 = "g"
+end11 = "e"
+end12 = "r"
+
+# 如果用print打印的时候，如果后面加上一个逗号，那么下面的打印行会喝这一行合并
+print end1 + end2 + end3 + end4 + end5 + end6,
+print end7 + end8 + end9 + end10 + end11 + end12
+
+
