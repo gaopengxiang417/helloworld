@@ -42,7 +42,7 @@ print "is less or equal:", 5 <= -2
 
 print 30.0 / 13
 
-
+# 变量的使用
 cars = 100
 spaces_in_cars = 4.0
 drivers = 30
@@ -58,3 +58,20 @@ print "there will be", cars_not_driver, "empty cars"
 print "we can transport", carpool_capcity, "people today"
 print "we have", passengers,"to carpool today"
 print "we need to put about", average_passengars_per_car, "in each car"
+
+
+# 变量和格式化的打印
+
+my_name = "wangchen"
+my_age = 27 # not a lie
+my_height = 171 #cm
+my_weight = 58 # kg
+my_eyes = 'yellow'
+my_teeth = "white"
+my_hair = "black"
+
+print "let's talk about %s ." % my_name
+print "he is %d cm height" % my_height
+print "he is %d kg " % my_weight
+print "he got %s eyes and %s hair" % (my_eyes, my_hair)
+print "he teeth are usually %s" % my_teeth
