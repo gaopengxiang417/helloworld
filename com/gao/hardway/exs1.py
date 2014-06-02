@@ -137,3 +137,27 @@ print end1 + end2 + end3 + end4 + end5 + end6,
 print end7 + end8 + end9 + end10 + end11 + end12
 
 
+# 测试format格式
+formats = "%r %r %r %r"
+
+print formats % (1, 2, 3, 4)
+print formats % ("one", "two", "three", "four")
+print formats % (True, False, False, True)
+print formats % (formats, formats, formats, formats)
+print formats % ("i had the thing", "that you type right",
+                 "but it didn't sing", "so i said goognight")
+
+
+# here is some new strange stuff,remember type it right
+days = "mon tue wed thu fri sat sun"
+months = "jan\nfeb\nmar\napr\nmay\njun\njul\naug"
+
+print "these days", days
+print "there months", months
+
+print """
+there is something going here
+with the three double-quotes
+we'll touch as much as we can
+even 4 lines if we like ,
+"""
