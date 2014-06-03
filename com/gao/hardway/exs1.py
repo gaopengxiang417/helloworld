@@ -161,3 +161,46 @@ with the three double-quotes
 we'll touch as much as we can
 even 4 lines if we like ,
 """
+
+# python中得转移功能
+tabby_cat = "\ti'm tabby in"
+persian_cat = "i'm split\n on a line"
+backslash_cat = "i'm \\ a \\ cat"
+
+fat_cat = """
+l'll do a list:
+\t* cat foot
+\t* fish
+\t* catninp\n\t"""
+
+print tabby_cat
+print persian_cat
+print backslash_cat
+print fat_cat
+
+#三个单引号的功能,三个单引号里面的内容不会进行任何的转换
+print '''i'll do a list\t*cat\tfish'''
+
+#转移和格式化
+print "i love \n %s, ok \t a table " % "china"
+
+#%r来转移单引号和双引号,如果%r,里面如果有单引号会把外面转化为双引号
+print "i love %r that" % 'a \'quit'
+print "i love %s that" % 'a \'quit'
+
+print "how old are you?",
+age = raw_input("please write you age:")
+print "how tall are you?",
+tall = raw_input("please write you tall:")
+print "how much are your weight?",
+weight = raw_input("please write you weight:")
+
+print "so,your are %s old,and your height is %s and your weight is %s" % (age, tall, weight)
+
+
+#raw_input and input 区分这两者的不同
+raw_string = raw_input("raw input:")
+input_string = input("input:")
+
+
+
