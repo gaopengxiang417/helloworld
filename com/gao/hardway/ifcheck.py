@@ -36,5 +36,6 @@ elif door == "2":
         print "the insanity rots your eyes into a pool of muck ,good job"
 
 
+
 else:
     print "you stumble around and fall on a kniff and die. good job"
