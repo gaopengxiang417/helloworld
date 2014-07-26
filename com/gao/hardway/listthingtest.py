@@ -28,3 +28,4 @@ print stuff.pop()
 print " ".join(stuff)
 
 print "#".join(stuff[3:5])
+
