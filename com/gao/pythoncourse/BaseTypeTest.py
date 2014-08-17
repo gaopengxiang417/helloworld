@@ -145,6 +145,7 @@ def add_end_new(l = None):
 print add_end_new()
 print add_end_new()
 
+
 #可变参数的功能
 def calc(*numbers):
 
@@ -167,8 +168,37 @@ json = {"first": 1, "second": 2}
 
 print person("kkkk", 44, jons = json)
 
+
 #各种参数组合
 def func(a, b, c = 0, *args, **kwargs):
     print a,b,c,args,kwargs
 
 func(1, "88", 43, "43", "kkkk", ke={"kk":"ss"})
+
+
+#递归函数使用
+def fact(n):
+    if n == 1:
+        return 1
+    return n * fact(n-1)
+
+
+print fact(5)
+print fact(20)
+# print fact(1000)
+
+
+#尾递归实现,如果编译器没有实现优化，尾递归和普通的没有区别
+def fact_iter(result, current, n):
+    if current > n:
+        return result
+    return fact_iter(result * current, current + 1, n)
+
+
+def fact2(n):
+    return fact_iter(1, 1, n)
+
+
+print fact2(5)
+print fact2(10)
+
