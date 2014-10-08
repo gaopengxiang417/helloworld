@@ -1,16 +1,17 @@
 __author__ = 'wangchen'
-#coding=utf-8
+# coding=utf-8
 
 from collections import Iterable
+import functools
 
-#切片的使用
+# 切片的使用
 
 name_list = ["Michacl", "Sarah", "Tracy", "Bob", "Jack"]
 
-#最泵的办法
+# 最泵的办法
 print [name_list[0], name_list[3]]
 
-#最高效的办法
+# 最高效的办法
 print name_list[0:3]
 print name_list[:3]
 print name_list[-1]
@@ -18,7 +19,7 @@ print name_list[:]
 print name_list[3:]
 print name_list[4:100]
 
-#定义tuple
+# 定义tuple
 tuple_list = ("Michacl", "Sarsh", "Tracy", "Bob", "Jack")
 
 print tuple_list[0:3]
@@ -30,7 +31,7 @@ print tuple_list[-2]
 dirc = {"name": "china", "age": "44", "street": "the publish of china"}
 
 for key, value in dirc.iteritems():
-    print key,value
+    print key, value
 
 
 #字符串迭代
@@ -63,6 +64,7 @@ for n in generator:
 
 print
 
+
 def fab(max):
     n, a, b = 0, 0, 1
     while n < max:
@@ -70,6 +72,103 @@ def fab(max):
         a, b = b, a + b
         n += 1
 
+
 print fab(5).next()
 for n in fab(5):
     print n
+
+
+#sort 排序
+print sorted([23, 54, 1, 4, 65])
+
+
+def sortfun(x, y):
+    if x > y:
+        return -1
+    elif x < y:
+        return 1
+    else:
+        return 0
+
+
+print sorted([23, 45, 2, 13, 43], sortfun)
+
+
+#忽略大小写的比较
+def ignorecompare(s1, s2):
+    u1 = s1.upper()
+    u2 = s2.upper()
+
+    if u1 > u2:
+        return 1
+    elif u1 < u2:
+        return -1
+    else:
+        return 0
+
+
+print sorted(["abd", "SD", "ssAS", "ASS"])
+
+
+#函数作为返回值
+def calc_sum(*args):
+    def sum():
+        dx = 0
+        for arg in args:
+            dx = dx + arg
+        return dx
+
+    return sum
+
+
+f1 = calc_sum(1, 34, 54, 65, 784, 342)
+f2 = calc_sum(1, 34, 54, 65, 784, 342)
+
+print f1
+print f2
+print f1 == f2
+print f1()
+print f2()
+
+
+#匿名函数的使用
+ff = lambda x: x * x
+
+print ff
+print ff(3)
+
+
+def buildlambda(x, y):
+    return lambda: x * x + y * y
+
+
+function = buildlambda(3, 4)
+print buildlambda(3, 5)()
+print function
+print function()
+
+print "*******************"
+
+# fff = buildlambda()
+# print fff
+# print fff()
+
+
+#函数可以赋值给变量，变量也能调用函数
+def now():
+    print '2014-10-09'
+
+now_now = now
+now_now()
+
+
+print now_now.__name__
+print now.__name__
+
+
+#偏函数的使用
+int2 = functools.partial(int, base=2)
+
+print int2('11110000')
+
+
