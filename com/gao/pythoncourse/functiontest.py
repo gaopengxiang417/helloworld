@@ -27,14 +27,14 @@ print tuple_list[:]
 print tuple_list[-2]
 
 
-#迭代的使用
+# 迭代的使用
 dirc = {"name": "china", "age": "44", "street": "the publish of china"}
 
 for key, value in dirc.iteritems():
     print key, value
 
 
-#字符串迭代
+# 字符串迭代
 for c in "abc":
     print c
 
@@ -112,13 +112,13 @@ print sorted(["abd", "SD", "ssAS", "ASS"])
 
 #函数作为返回值
 def calc_sum(*args):
-    def sum():
+    def sum1():
         dx = 0
         for arg in args:
             dx = dx + arg
         return dx
 
-    return sum
+    return sum1
 
 
 f1 = calc_sum(1, 34, 54, 65, 784, 342)
@@ -158,17 +158,54 @@ print "*******************"
 def now():
     print '2014-10-09'
 
+
 now_now = now
 now_now()
 
-
 print now_now.__name__
 print now.__name__
-
 
 #偏函数的使用
 int2 = functools.partial(int, base=2)
 
 print int2('11110000')
+
+print "*******************"
+
+
+#定义记录日志函数
+def log(func):
+    def wrapper(*args, **kwargs):
+        print "call %s()..." % func.__name__
+        return func(*args, **kwargs)
+
+    return wrapper
+
+
+@log
+def now_log():
+    print "2014-23-12"
+
+now_log()
+
+
+#定义接受参数的日志函数
+def log_parameter(text):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            print "%s %s()..." % (text, func.__name__)
+            return func(*args, **kwargs)
+        return wrapper
+    return decorator
+
+
+@log_parameter("china")
+def now_log_parameter():
+    print "now log parameter"
+
+
+now_log_parameter()
+
+
 
 
